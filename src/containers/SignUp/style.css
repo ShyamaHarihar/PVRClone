@@ -1,0 +1,42 @@
+body {
+    background-color: rgba(3, 0, 0, 0.89);
+    color: white;
+}
+
+.signup-style {
+    font-size: 2.2rem;
+    color: rgb(238, 242, 245);
+    font-weight: bolder;
+    font-family: lato, arial, helvetica;
+}
+
+.labelstyle {
+    color: white !important;
+}
+
+.form-style {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.custom-button {
+    background-color: rgb(255, 255, 255);
+    height: 55px;
+    width: 100%;
+    font-family: lato, arial, helvetica;
+}
+
+.btn {
+    background-image: linear-gradient(to right, #743ad5, #d53a9d 100%);
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+}

@@ -1,0 +1,16 @@
+.form-style {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15%;
+    align-items: center;
+}
+
+body {
+    background-color: black !important;
+    color: rgba(255, 255, 255, 0.822) !important;
+}
+
+.button-class {
+    background-color: white;
+}

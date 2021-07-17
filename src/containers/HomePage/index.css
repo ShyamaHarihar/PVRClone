@@ -1,0 +1,42 @@
+.each-fade {
+    display: flex;
+    width: 100%;
+}
+
+.each-fade>div {
+    width: 75%;
+}
+
+.each-fade>div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.each-fade p {
+    width: 25%;
+    font-size: 1em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: #adceed;
+}
+
+.nav-style {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: stretch;
+    align-items: center;
+    font-size: 2.2rem;
+    color: rgb(238, 242, 245);
+    font-family: lato, arial, helvetica;
+    margin-right: 0px!important;
+    height: 8rem;
+    margin-right: 6rem!important;
+}
+
+.dropdown {
+    color: gray;
+}

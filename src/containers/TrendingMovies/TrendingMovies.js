@@ -8,14 +8,6 @@ import './index.css'
 const TrendingMovies = () => {
     const [trendingmovie, setTrendingmovie] = useState([]);
     const [currentpage, setCurrentPage] = useState(0);
-    useEffect(() => {
-        const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
-        fetchmovies(endpoint)
-    }, [])
-    const handleload = () => {
-        const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${currentpage + 1}`
-        fetchmovies(endpoint)
-    }
     const fetchmovies = (path) => {
         fetch(path)
             .then(response => response.json())
@@ -25,6 +17,17 @@ const TrendingMovies = () => {
                 setCurrentPage(response.page)
             })
     }
+    useEffect(() => {
+
+        const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
+        fetchmovies(endpoint)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+    const handleload = () => {
+        const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${currentpage + 1}`
+        fetchmovies(endpoint)
+    }
+
     return (
         <div>
             {

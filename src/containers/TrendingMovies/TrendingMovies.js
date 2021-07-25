@@ -6,15 +6,25 @@ import TopMovie from "./TopMovie"
 import { Text, Button } from "@chakra-ui/react";
 import './index.css'
 const TrendingMovies = () => {
-    const [trendingmovie, setTrendingmovie] = useState([])
+    const [trendingmovie, setTrendingmovie] = useState([]);
+    const [currentpage, setCurrentPage] = useState(0);
     useEffect(() => {
-        fetch(`${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`)
+        const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
+        fetchmovies(endpoint)
+    }, [])
+    const handleload = () => {
+        const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=${currentpage + 1}`
+        fetchmovies(endpoint)
+    }
+    const fetchmovies = (path) => {
+        fetch(path)
             .then(response => response.json())
             .then(response => {
                 console.log(response)
-                setTrendingmovie(response.results)
+                setTrendingmovie([...trendingmovie, ...response.results])
+                setCurrentPage(response.page)
             })
-    }, [])
+    }
     return (
         <div>
             {
@@ -43,8 +53,12 @@ const TrendingMovies = () => {
 
                 </SimpleGrid>
                 <br />
-                <div style={{ display: 'flex', justifyContent: 'center' }}><Button colorScheme="whiteAlpha" size="xs">
-                    Load More
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Button
+                        colorScheme="whiteAlpha"
+                        size="xs"
+                        onClick={handleload}>
+                        Load More
                 </Button></div>
             </div>
 

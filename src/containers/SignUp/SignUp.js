@@ -69,7 +69,7 @@ const SignUp = () => {
                         }}
                     >
                         SIGN UP
-            </Box>
+                    </Box>
                     <Button colorScheme="white" variant="outline" fontWeight="light" borderRadius="10px" borderWidth="1.8px" onClick={() => { setRedirect(true); }}>
                         ALDREADY A USER? SIGN IN
                     </Button>

@@ -1,29 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react';
 import 'react-slideshow-image/dist/styles.css'
 import { Zoom } from 'react-slideshow-image';
-import { FormControl, Select, Button } from "@chakra-ui/react";
+import { FormControl, Select, Button, Menu } from "@chakra-ui/react";
 import { TriangleUpIcon } from '@chakra-ui/icons';
 import './index.css';
-import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 const HomePage = () => {
-    const [redirect, setRedirect] = useState(false);
-    const [redirectsignup, setRedirectsignup] = useState(false);
-    const [redirecttrend, setRedirecttrend] = useState(false);
-    const redirectfunLogin = () => {
-        if (redirect) {
-            return (<Redirect to='/login'></Redirect>)
-        }
-    }
-    const redirectfunSignup = () => {
-        if (redirectsignup) {
-            return (<Redirect to='/signup'></Redirect>)
-        }
-    }
-    const redirectfuntrend = () => {
-        if (redirecttrend) {
-            return (<Redirect to='/trendingmovies'></Redirect>)
-        }
-    }
     const Slideshow = () => {
         const images = [
             'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626527749/popcorn2.jpg',
@@ -51,6 +33,7 @@ const HomePage = () => {
     const navbar = () => {
         return (
             <div className="nav-style" background_color="black">
+
                 <Button
                     colorScheme="white"
                     height="2.5rem"
@@ -82,33 +65,35 @@ const HomePage = () => {
                     fontWeight="light"
                     borderRadius="5px"
                     borderWidth="1.8px"
-                    onClick={() => { setRedirecttrend(true); }}>
-                    TRENDING NOW
-            </Button>
+                >
+                    <Link to='/trendingmovies'>TRENDING NOW</Link>
+                </Button>
                 <Button
                     colorScheme="white"
                     height="2.5rem"
                     variant="outline"
-                    width="10rem"
+                    width="7rem"
                     fontWeight="light"
                     borderRadius="5px"
                     borderWidth="1.8px"
-                    onClick={() => { setRedirect(true); }}>
-                    LOG IN
-            </Button>
+                >
+                    <Link to='/login'>LOG IN</Link>
+                </Button>
                 <Button
                     colorScheme="white"
                     height="2.5rem"
                     variant="outline"
-                    width="10rem"
+                    width="7rem"
                     fontWeight="light"
                     borderRadius="5px"
                     borderWidth="1.8px"
-                    onClick={() => { setRedirectsignup(true); }}>
-                    SIGN UP
-            </Button>
+                >
+                    <Link to='/signup'>SIGN UP</Link>
+                </Button>
+            </div >
 
-            </div>
+
+
         )
     }
 
@@ -116,9 +101,6 @@ const HomePage = () => {
         <div>
             {navbar()}
             {Slideshow()}
-            {redirectfunLogin()}
-            {redirectfunSignup()}
-            {redirectfuntrend()}
         </div>
     )
 }

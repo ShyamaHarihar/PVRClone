@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { API_URL, API_KEY, IMAGE_URL } from "../../config/config";
+import { Grid, GridItem } from "@chakra-ui/react";
 import TopMovie from "./TopMovie"
+import { Text } from "@chakra-ui/react";
 const TrendingMovies = () => {
     const [trendingmovie, setTrendingmovie] = useState([])
     useEffect(() => {
@@ -23,6 +25,10 @@ const TrendingMovies = () => {
 
                 />
             }
+            <div style={{ width: '85%', margin: '1rem auto' }}>
+                <Text style={{ color: 'white' }} fontSize="3xl">Latest Movies</Text>
+
+            </div>
         </div>
     )
 }

@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+body {
+    overflow: hidden;
+}
+
 .each-fade>div {
     width: 75%;
 }
@@ -27,14 +31,15 @@
 .nav-style {
     display: flex;
     justify-content: space-between;
-    flex-direction: stretch;
+    flex-direction: row;
     align-items: center;
+    overflow: hidden;
     font-size: 2.2rem;
     color: rgb(238, 242, 245);
     font-family: lato, arial, helvetica;
-    margin-right: 0px!important;
+    /* margin-right: 0px!important; */
     height: 8rem;
-    margin-right: 6rem!important;
+    /* margin-right: 6rem!important; */
 }
 
 .dropdown {

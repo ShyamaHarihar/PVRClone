@@ -16,7 +16,7 @@ const SignUp = () => {
     const signupform = () => {
         return (
             <div className="form-style">
-                <SimpleGrid columns={[5, null, 1]} spacing="40px">
+                <SimpleGrid columns={[5, null, 1]} spacing="40px" minChildWidth="360px">
                     <Input
                         variant="flushed"
                         width="25rem"

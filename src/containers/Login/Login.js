@@ -17,7 +17,7 @@ const Login = () => {
     const loginform = () => {
         return (
             <div className="form-style">
-                <SimpleGrid columns={[4, null, 1]} spacing="40px">
+                <SimpleGrid columns={[4, null, 1]} spacing="40px" minChildWidth="360px">
                     <Input
                         variant="flushed"
                         width="25rem"
@@ -61,7 +61,7 @@ const Login = () => {
                         }}
                     >
                         LOGIN
-            </Box>
+                    </Box>
                     <Button
                         colorScheme="white"
                         variant="outline"
@@ -70,7 +70,7 @@ const Login = () => {
                         borderWidth="1.8px"
                         onClick={() => { setRedirect(true); }}>
                         DON'T HAVE AN ACCOUNT? SIGNUP
-            </Button>
+                    </Button>
                 </SimpleGrid>
             </div>);
 

@@ -29,7 +29,7 @@ const TrendingMovies = () => {
             }
             <div style={{ width: '85%', margin: '1rem auto' }}>
                 <Text style={{ color: 'white' }} fontSize="3xl">Latest Movies</Text>
-                <SimpleGrid columns={[4, 4]} spacingX="40px" spacingY="20px">
+                <SimpleGrid columns={[4, 3]} spacingX="40px" spacingY="20px">
                     {trendingmovie && trendingmovie.map((trendingmovie, index) => (
                         <React.Fragment key={index}>
                             <MovieCard

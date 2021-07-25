@@ -9,7 +9,7 @@ const HomePage = () => {
         const images = [
             { url: 'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626527749/popcorn2.jpg' },
             { url: 'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626528959/moviehall.jpg' },
-            { url: 'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626529302/arlinda-1CfBmk3VD2o-unsplash_1_kfhwkj.jpg' }
+            { url: 'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_800,w_2800/v1626529302/arlinda-1CfBmk3VD2o-unsplash_1_kfhwkj.jpg' }
         ];
 
 
@@ -17,8 +17,7 @@ const HomePage = () => {
             <div>
                 <SimpleImageSlider
                     width={"100%"}
-                    height={800}
-                    style={{ objectFit: "cover", width: "100%" }}
+                    height={500}
                     images={images}
                     showBullets={true}
                     showNavs={true}

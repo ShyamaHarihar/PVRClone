@@ -1,7 +1,6 @@
 import React from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
-import { FormControl, Select, Button } from "@chakra-ui/react";
-import { TriangleUpIcon } from '@chakra-ui/icons';
+import { Button } from "@chakra-ui/react";
 import './index.css';
 import { Link } from 'react-router-dom';
 const HomePage = () => {
@@ -30,29 +29,6 @@ const HomePage = () => {
     const navbar = () => {
         return (
             <div className="nav-style">
-                <Button
-                    colorScheme="white"
-                    height="2.5rem"
-                    variant="outline"
-                    fontWeight="light"
-                    borderRadius="5px"
-                    borderWidth="1.8px"
-                    className="location"
-                >
-                    <TriangleUpIcon color="white.500" boxSize={5} />
-                    <FormControl id="country">
-                        <Select
-                            placeholder="Enter location"
-                            size="md"
-                            variant="flushed"
-                            className="dropdown"
-                            focusBorderColor="none">
-                            <option>Chennai</option>
-                            <option>Coimbatore</option>
-                            <option>Mumbai</option>
-                        </Select>
-                    </FormControl>
-                </Button>
                 <Button
                     colorScheme="white"
                     height="2.5rem"

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { API_URL, API_KEY, IMAGE_URL } from "../../config/config";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
+import MovieCard from '../MovieCard/MovieCard'
 import TopMovie from "./TopMovie"
-import { Text } from "@chakra-ui/react";
+import { Text, Button } from "@chakra-ui/react";
+import './index.css'
 const TrendingMovies = () => {
     const [trendingmovie, setTrendingmovie] = useState([])
     useEffect(() => {
@@ -27,10 +29,25 @@ const TrendingMovies = () => {
             }
             <div style={{ width: '85%', margin: '1rem auto' }}>
                 <Text style={{ color: 'white' }} fontSize="3xl">Latest Movies</Text>
-
+                <SimpleGrid columns={[4, 4]} spacingX="40px" spacingY="20px">
+                    {trendingmovie && trendingmovie.map((trendingmovie, index) => (
+                        <React.Fragment key={index}>
+                            <MovieCard
+                                image={trendingmovie.poster_path && `${IMAGE_URL}w500${trendingmovie.poster_path}`}
+                                movieId={trendingmovie.id}
+                                moviename={trendingmovie.original_title}
+                                vote={trendingmovie.vote_average}
+                            />
+                        </React.Fragment>
+                    ))}
+                    <Button colorScheme="whiteAlpha" size="xs" style={{ display: 'flex', justifyContent: 'center' }}>
+                        Load More
+                    </Button>
+                </SimpleGrid>
             </div>
+
         </div>
     )
 }
 
-export default TrendingMovies
+export default TrendingMovies;

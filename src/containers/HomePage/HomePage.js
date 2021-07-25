@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-slideshow-image/dist/styles.css'
 import { Zoom } from 'react-slideshow-image';
-import { FormControl, Select, Button, Menu } from "@chakra-ui/react";
+import { FormControl, Select, Button } from "@chakra-ui/react";
 import { TriangleUpIcon } from '@chakra-ui/icons';
 import './index.css';
 import { Link } from 'react-router-dom';

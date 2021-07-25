@@ -4,7 +4,11 @@ import './index.css';
 const MovieCard = (props) => {
     return (
         <div>
-            <Box maxW="sm" borderWidth="2px" borderRadius="10px" overflow="hidden">
+            <Box boxShadow="rgba(255, 255, 255, 0.7) 0px 5px 10px 0px;"
+                maxW="sm"
+                borderWidth="0px"
+                borderRadius="5px"
+                overflow="hidden">
                 <Box m="7">
                     <a href={`/movie/${props.movieId}`}>
                         <img style={{ width: '100%', height: '400px' }}

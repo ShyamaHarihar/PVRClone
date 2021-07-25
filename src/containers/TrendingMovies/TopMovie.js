@@ -13,17 +13,17 @@ const TopMovie = (props) => {
             backgroundSize: '100%, cover',
             backgroundPosition: 'center, center',
             width: '100%',
-            position: 'relative'
+            position: 'relative',
+            opacity: '0.6'
         }}>
             <div>
-                <div style={{ position: 'absolute', maxWidth: '500px', bottom: '2rem', marginLeft: '2rem' }}>
-                    <Text fontSize="3xl">{props.title}</Text>
-                    <p style={{ color: 'white', fontSize: '1rem' }}>{props.text}</p>
-                    <p style={{ color: 'yellow', fontSize: '1rem' }}>{"Rating " + props.vote}</p>
-                    <p style={{ color: 'white', fontSize: '1rem' }}>{"Release Date " + props.date}</p>
+                <div style={{ position: 'absolute', maxWidth: '500px', bottom: '2rem', marginLeft: '2rem', fontFamily: "Roboto,sans-serif" }}>
+                    <Text fontSize="3xl" fontFamily="Roboto,sans-serif"> {props.title}</Text>
+                    <p style={{ color: 'yellow', fontSize: '1rem' }} >{"Rating " + props.vote}</p>
+                    <p style={{ color: 'white', fontSize: '1rem' }} >{"Release Date " + props.date}</p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

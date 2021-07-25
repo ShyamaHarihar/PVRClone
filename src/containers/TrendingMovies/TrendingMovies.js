@@ -21,14 +21,13 @@ const TrendingMovies = () => {
                 trendingmovie[0] &&
                 <TopMovie image={`${IMAGE_URL}w1280${trendingmovie[0].backdrop_path}`}
                     title={trendingmovie[0].original_title}
-                    text={trendingmovie[0].overview}
                     vote={trendingmovie[0].vote_average}
                     date={(trendingmovie[0].release_date)}
 
                 />
             }
             <div style={{ width: '85%', margin: '1rem auto' }}>
-                <Text style={{ color: 'white' }} fontSize="3xl">Latest Movies</Text>
+                <Text style={{ color: 'white' }} fontSize="3xl" fontFamily="Roboto,sans-serif">Latest Movies</Text>
                 <SimpleGrid columns={[4, 4]} spacingX="40px" spacingY="20px" minChildWidth="360px">
                     {trendingmovie && trendingmovie.map((trendingmovie, index) => (
                         <React.Fragment key={index}>

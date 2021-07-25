@@ -1,6 +1,5 @@
 import React from 'react';
-import 'react-slideshow-image/dist/styles.css'
-import { Zoom } from 'react-slideshow-image';
+import SimpleImageSlider from "react-simple-image-slider";
 import { FormControl, Select, Button } from "@chakra-ui/react";
 import { TriangleUpIcon } from '@chakra-ui/icons';
 import './index.css';
@@ -8,40 +7,38 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
     const Slideshow = () => {
         const images = [
-            'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626527749/popcorn2.jpg',
-            'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626528959/moviehall.jpg',
-            'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626529302/arlinda-1CfBmk3VD2o-unsplash_1_kfhwkj.jpg'
+            { url: 'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626527749/popcorn2.jpg' },
+            { url: 'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626528959/moviehall.jpg' },
+            { url: 'https://res.cloudinary.com/drgemwb6e/image/upload/c_scale,h_1500,w_3500/v1626529302/arlinda-1CfBmk3VD2o-unsplash_1_kfhwkj.jpg' }
         ];
 
-        const zoomInProperties = {
-            indicators: true,
-            scale: 1.4
-        }
+
         return (
             <div>
-                <Zoom {...zoomInProperties}>
-                    {images.map((each, index) => (
-                        <div key={index} style={{ width: "100%" }}>
-                            <img style={{ objectFit: "cover", width: "100%" }} src={each} alt="could not load" />
-                        </div>
-                    ))}
-                </Zoom>
+                <SimpleImageSlider
+                    width={"100%"}
+                    height={800}
+                    style={{ objectFit: "cover", width: "100%" }}
+                    images={images}
+                    showBullets={true}
+                    showNavs={true}
+                />
             </div>
+
         )
     }
 
     const navbar = () => {
         return (
-            <div className="nav-style" background_color="black">
-
+            <div className="nav-style">
                 <Button
                     colorScheme="white"
                     height="2.5rem"
                     variant="outline"
-                    width="15rem"
                     fontWeight="light"
                     borderRadius="5px"
                     borderWidth="1.8px"
+                    className="location"
                 >
                     <TriangleUpIcon color="white.500" boxSize={5} />
                     <FormControl id="country">
@@ -61,18 +58,18 @@ const HomePage = () => {
                     colorScheme="white"
                     height="2.5rem"
                     variant="outline"
-                    width="10rem"
+                    className="popularmovies"
                     fontWeight="light"
                     borderRadius="5px"
                     borderWidth="1.8px"
                 >
-                    <Link to='/trendingmovies'>TRENDING NOW</Link>
+                    <Link to='/trendingmovies'>POPULAR MOVIES</Link>
                 </Button>
                 <Button
                     colorScheme="white"
                     height="2.5rem"
                     variant="outline"
-                    width="7rem"
+                    className="login"
                     fontWeight="light"
                     borderRadius="5px"
                     borderWidth="1.8px"
@@ -83,14 +80,14 @@ const HomePage = () => {
                     colorScheme="white"
                     height="2.5rem"
                     variant="outline"
-                    width="7rem"
+                    className="signup"
                     fontWeight="light"
                     borderRadius="5px"
                     borderWidth="1.8px"
                 >
                     <Link to='/signup'>SIGN UP</Link>
                 </Button>
-            </div >
+            </div>
 
 
 

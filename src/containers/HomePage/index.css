@@ -34,6 +34,7 @@ body {
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+    *width: 10rem;
     font-size: 2.2rem;
     color: rgb(238, 242, 245);
     font-family: lato, arial, helvetica;
@@ -44,4 +45,24 @@ body {
 
 .dropdown {
     color: gray;
+}
+
+@media (max-width: 605px) {
+    /* For mobile phones: */
+    [className="location"] {
+        width: 5rem;
+        font-size: 1.2rem;
+    }
+    [className="popularmovies"] {
+        width: 5rem;
+        font-size: 1.2rem;
+    }
+    [className="login"] {
+        width: 5rem;
+        font-size: 1.2rem;
+    }
+    [className="signup"] {
+        width: 5rem;
+        font-size: 1.2rem;
+    }
 }

@@ -5,6 +5,7 @@
 <li>Chakra UI (Styling library) </li>
 <li>Cloudinary</li>
 <li>Netlify</li>
+
 ### Features
 <li>Mobile Responsive UI</li>
 <li>Trending Movies shows the trending movies currently that are currently being screened at theatres and the load more button would show more trending movies </li>

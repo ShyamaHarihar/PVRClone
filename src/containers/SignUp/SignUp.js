@@ -55,7 +55,7 @@ const SignUp = () => {
                         borderRadius="10px"
                         fontSize="14px"
                         fontWeight="semibold"
-                        bg="#dde0e2"
+                        bg="#b5babd"
                         color="#0c0c0c"
                         _hover={{ bg: "#ebedf0" }}
                         _active={{

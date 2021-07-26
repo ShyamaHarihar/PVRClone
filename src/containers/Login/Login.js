@@ -47,7 +47,7 @@ const Login = () => {
                         borderRadius="10px"
                         fontSize="14px"
                         fontWeight="semibold"
-                        bg="#dde0e2"
+                        bg="#dddfe2"
                         color="#0c0c0c"
                         _hover={{ bg: "#ebedf0" }}
                         _active={{

@@ -44,12 +44,15 @@ const TrendingMovies = () => {
                 <SimpleGrid columns={[4, 4]} spacingX="40px" spacingY="20px" minChildWidth="360px">
                     {trendingmovie && trendingmovie.map((trendingmovie, index) => (
                         <React.Fragment key={index}>
-                            <MovieCard
-                                image={trendingmovie.poster_path && `${IMAGE_URL}w500${trendingmovie.poster_path}`}
-                                movieId={trendingmovie.id}
-                                moviename={trendingmovie.original_title}
-                                vote={trendingmovie.vote_average}
-                            />
+                            {trendingmovie.poster_path &&
+                                <MovieCard
+                                    image={trendingmovie.poster_path && `${IMAGE_URL}w500${trendingmovie.poster_path}`}
+                                    movieId={trendingmovie.id}
+                                    moviename={trendingmovie.original_title}
+                                    vote={trendingmovie.vote_average}
+                                />
+                            }
+
                         </React.Fragment>
                     ))}
 
@@ -58,7 +61,6 @@ const TrendingMovies = () => {
                 <br />
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <Button
-                        colorScheme="whiteAlpha"
                         size="xs"
                         onClick={handleload}>
                         Load More

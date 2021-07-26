@@ -3,18 +3,14 @@ import { Text } from "@chakra-ui/react";
 const TopMovie = (props) => {
     return (
         <div style={{
-            background:
-                `linear-gradient(to bottom, rgba(0,0,0,0)
-            39%,rgba(0,0,0,0)
-            41%,rgba(0,0,0,0.65)
-            100%),
-            url('${props.image}'), #1c1c1c`,
+            backgroundImage: `url('${props.image}')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
             height: '500px',
-            backgroundSize: '100%, cover',
-            backgroundPosition: 'center, center',
             width: '100%',
-            position: 'relative',
-            opacity: '0.6'
+            opacity: '0.6',
+            position: 'relative'//to place text on image
         }}>
             <div>
                 <div style={{ position: 'absolute', maxWidth: '500px', bottom: '2rem', marginLeft: '2rem', fontFamily: "Roboto,sans-serif" }}>
@@ -23,7 +19,7 @@ const TopMovie = (props) => {
                     <p style={{ color: 'white', fontSize: '1rem' }} >{"Release Date " + props.date}</p>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

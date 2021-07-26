@@ -16,7 +16,6 @@ const MovieDetail = (props) => {
     const [moviedetail, setMoviedetail] = useState([])
     const [actors, setActors] = useState([])
     const [actortoggleview, setActortoggleview] = useState(false);
-    // const movie_Id = props.match.params.movieId
     useEffect(() => {
         const movie_Id = props.match.params.movieId;
         fetch(`${API_URL}movie/${movie_Id}?api_key=${API_KEY}&language=en-US`)

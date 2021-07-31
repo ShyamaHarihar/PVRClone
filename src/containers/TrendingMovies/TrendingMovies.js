@@ -3,7 +3,7 @@ import { API_URL, API_KEY, IMAGE_URL } from "../../config/config";
 import { SimpleGrid } from "@chakra-ui/react";
 import MovieCard from '../MovieCard/MovieCard'
 import TopMovie from "./TopMovie"
-import { Text, Button } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import './index.css'
 const TrendingMovies = () => {
     const [trendingmovie, setTrendingmovie] = useState([]);
@@ -60,11 +60,20 @@ const TrendingMovies = () => {
                 </SimpleGrid>
                 <br />
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <Button
-                        size="xs"
-                        onClick={handleload}>
-                        Load More
-                </Button></div>
+                    {/* <Button
+                        size="md"
+                        style={{ color: 'black', align: 'center' }}
+                    >Load More
+                    </Button> */}
+                    <lord-icon
+                        src="https://cdn.lordicon.com/wtfdpwey.json"
+                        trigger="loop-on-hover"
+                        colors="primary:#eee966,secondary:#ffffff"
+                        onClick={handleload}
+                        style={{ width: '150px', height: '150px', align: 'center' }}>
+
+                    </lord-icon>
+                </div>
             </div>
 
         </div>

@@ -88,7 +88,7 @@ const MovieDetail = (props) => {
                     colorScheme="yellow"
                     variant="solid"
                     style={{ align: "center" }}
-                    onClick={handleloadactors}>CAST</Button> : null}
+                    onClick={handleloadactors}>VIEW CAST</Button> : null}
                 {actortoggleview ? <lord-icon
                     src="https://cdn.lordicon.com/wtfdpwey.json"
                     trigger="loop"

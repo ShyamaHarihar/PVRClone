@@ -84,11 +84,19 @@ const MovieDetail = (props) => {
             </Table>
             {/*To view the actors as a grid*/}
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem', marginBottom: '3rem' }}>
-                <Button
+                {!actortoggleview ? <Button
                     colorScheme="yellow"
                     variant="solid"
                     style={{ align: "center" }}
-                    onClick={handleloadactors}>CAST</Button>
+                    onClick={handleloadactors}>CAST</Button> : null}
+                {actortoggleview ? <lord-icon
+                    src="https://cdn.lordicon.com/wtfdpwey.json"
+                    trigger="loop"
+                    colors="primary:#eee966,secondary:#ffffff"
+                    style={{ width: '150px', height: '150px', align: 'center' }}>
+                </lord-icon>
+                    : null}
+
             </div>
 
             {

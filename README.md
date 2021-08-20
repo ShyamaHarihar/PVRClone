@@ -1,4 +1,5 @@
 ## EasyTicket
+## Deployed app Link : (https://easyticket.netlify.app)
 ### Tech stack,libraries and API's used
 <li>React.js</li>
 <li>MovieDB api</li>
